@@ -42,7 +42,16 @@ A: It specifies the character encoding as UTF-8, supporting most languages and c
 ________________________________________
 🔹 3. Forms & Inputs
 11. List some new input types introduced in HTML5.
-A: email, url, tel, date, range, color, search, number.
+A: <input type="email">: Allows the browser to validate email addresses.
+<input type="url">: Allows the browser to validate URLs.
+<input type="tel">: Allows the browser to validate telephone numbers.
+<input type="number">: Allows the browser to validate numerical inputs; supports min, max, and step attributes.
+<input type="date">: Provides a date picker interface for selecting dates.
+<input type="time">: Provides a time picker interface for selecting times.
+<input type="datetime-local">: Provides a combined date and time picker.
+<input type="month">: Provides a month picker interface.
+<input type="week">: Provides a week picker interface.
+<input type="color">: Provides a color picker interface for selecting colors.
 12. How does the required attribute work in forms?
 A: It forces users to fill out a field before submission.
 13. What is the pattern attribute used for?
