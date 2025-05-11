@@ -63,11 +63,24 @@ A: name is used in form submission data; id is used for linking with labels or s
 ________________________________________
 🔹 4. Semantics & SEO
 16. What are semantic HTML elements?
-A: Tags like <article>, <nav>, <aside>, which describe their content meaningfully.
+A: Tags like <header>
+<nav>
+<article>
+<section>
+<aside>
+<main>
+<figure>
+<figcaption>
+<details>
+<summary>
+<mark>
+<time>
+<meter>
+<progress>, which describe their content meaningfully.
 17. How does semantic HTML benefit SEO?
 A: It helps search engines better understand content structure and hierarchy.
 18. What’s the purpose of the <strong> and <em> tags?
-A: They indicate importance and emphasis, respectively, with semantic meaning (not just style).
+A: The <strong> tag indicating strong importance (usually bold). The <em> tag with stress or significance (usually italic).
 19. How do you define document structure with headings?
 A: Use heading tags <h1> to <h6> in a hierarchical, logical order.
 20. What is the difference between <b> vs <strong>, and <i> vs <em>?
