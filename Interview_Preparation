@@ -88,11 +88,11 @@ A: <strong> and <em> are semantic; <b> and <i> are purely visual.
 ________________________________________
 🔹 5. Accessibility (a11y)
 21. What does ARIA stand for?
-A: Accessible Rich Internet Applications — used to improve screen reader accessibility.
+A: Accessible Rich Internet Applications — used to improve screen reader accessibility.ARIA (Accessible Rich Internet Applications) is a set of attributes that enhance the accessibility of web content, especially for users relying on assistive technologies. It helps describe roles, states, and properties of custom UI elements that aren't inherently accessible.
 22. How do you label a form input for accessibility?
 A: Use <label for="id"> or aria-label.
 23. What is tabindex?
-A: Controls the tab navigation order of focusable elements.
+A: It is an HTML attribute that controls the order in which elements receive focus when users navigate using the Tab key.
 24. What are landmark elements in HTML?
 A: Elements like <main>, <nav>, <header>, <footer> help screen readers navigate the page.
 25. What does role="button" do?
