@@ -121,7 +121,8 @@ A: Holds HTML fragments that are not rendered until accessed via JavaScript.
 33. What is the data-* attribute used for?
 A: Used to store custom data attributes on elements, accessible via dataset in JavaScript.
 34. What is Web Storage in HTML5?
-A: Allows storage of key-value data in the browser through localStorage and sessionStorage.
+A: Web Storage in HTML5 is a feature that allows websites to store data in the browser on the client side.
+It includes localStorage (persists data with no expiration) and sessionStorage (data lasts until the tab is closed).
 35. What is the Drag and Drop API?
 A: An HTML5 API that lets users drag and drop elements using native browser events.
 ________________________________________
