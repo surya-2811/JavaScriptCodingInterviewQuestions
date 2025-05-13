@@ -104,7 +104,8 @@ ________________________________________
   <source src="video.mp4" type="video/mp4">
 </video>
 27. What’s the difference between <iframe> and <embed>?
-A: <iframe> embeds HTML documents; <embed> is used for multimedia or plugins.
+A: `<iframe>` is used to embed an entire webpage or external HTML document within your page.
+`<embed>` is used to insert multimedia or plugin content like videos, PDFs, or Flash directly into the page.
 28. How do you embed responsive images?
 A: Use <picture> or srcset to serve different images for various screen sizes.
 29. What is the alt attribute for images used for?
