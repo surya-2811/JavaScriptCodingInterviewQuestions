@@ -160,6 +160,5 @@ A: Building with baseline functionality first, then enhancing for modern browser
 49. Can HTML be used without CSS or JS?
 A: Yes, but it will be unstyled and static. CSS adds styling; JS adds interactivity.
 50. What is the difference between noscript and script?
-A: <noscript> provides fallback content when JavaScript is disabled or unsupported.
-
+A: The <noscript> HTML element provides content to be displayed when scripting is disabled or not supported in a browser. The <script> element, on the other hand, is used to include and execute scripts (like JavaScript) within an HTML document. 
 
