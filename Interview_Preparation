@@ -166,3 +166,6 @@ A: The <noscript> HTML element provides content to be displayed when scripting i
 Difference between Declare and Define:
 1. Declare- Create a variable name only. Not assigning a value.
 2. Define- Create a variable name and assigning a value.
+========================================
+'Ayush' → Truthy
+meaning this will return as a truthy value.
