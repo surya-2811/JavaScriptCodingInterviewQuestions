@@ -169,3 +169,6 @@ Difference between Declare and Define:
 ========================================
 'Ayush' → Truthy
 meaning this will return as a truthy value.
+=======================================
+With a for-in loop, we can iterate through object keys.
+Object keys are strings (if they're not a Symbol).
