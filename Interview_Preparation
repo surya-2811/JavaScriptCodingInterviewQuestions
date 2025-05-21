@@ -175,3 +175,4 @@ Object keys are strings (if they're not a Symbol).
 =======================================
 1. If the object property is changed, then the new object is pointing to the same memory address, so the original object property will also change. ( call by reference ) 2. If the object is reassigned with a new object then it is allocated to a new memory location, i.e it will be a real copy (call by value).
 2. An empty array is while printing in console.log is treated as Array.toString(), so it prints an empty string.
+3. With arrow functions, the this keyword refers to its current surrounding scope.
