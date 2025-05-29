@@ -234,3 +234,7 @@ Deprecated: This method was used in React.createClass() to initialize state. Mod
 11. Binding method ?
 12. Ternary operator and nullish foolish and optional chaning ?
 --------------------------------------------------
+13. console.log(9+'5') //95 and console.log(9-'5') //4
+14. console.log('9'-'5') //4 and console.log('priya'-'bagde') //Nan
+15. The isNaN() function in JavaScript is used to check whether a value is NaN (Not-a-Number). It returns true if the value is NaN and false if the value is a valid number.
+16. for in vs for of loop
