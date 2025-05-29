@@ -180,78 +180,47 @@ Object keys are strings (if they're not a Symbol).
 List of all the topics revised from handwritten notebook:
 1. Diff between Function and Classs
 2. Life Cycle methods in class of Reactjs
-Here's your **Interview Reference Card** for the **React Class Component Lifecycle Methods**. You can use this as a handy guide for interviews or as a reference sheet.
+🟢 Mounting Phase (Initial setup of the component)
+constructor()
+Initializes the component. Define initial state and bind methods.
 
----
+static getDerivedStateFromProps(props, state)
+Syncs state from props before the initial render. Rarely used in practice.
 
-### **React Class Component Lifecycle Methods**
+render()
+Returns JSX to render the component's UI.
 
----
+componentDidMount()
+Called after the initial render. Ideal for side effects like API calls or subscriptions.
 
-#### 🟢 **Mounting Phase** (Initial setup of the component)
+🔵 Updating Phase (When props or state change)
+static getDerivedStateFromProps(props, state)
+Called before every update, when new props are received.
 
-1. **`constructor()`**
+shouldComponentUpdate(nextProps, nextState)
+Determines whether the component should re-render. Used for performance optimization.
 
-   * Initializes the component. Define initial state and bind methods.
+render()
+Re-renders the component when props or state changes.
 
-2. **`static getDerivedStateFromProps(props, state)`**
+getSnapshotBeforeUpdate(prevProps, prevState)
+Captures information (e.g., scroll position) right before the DOM updates.
 
-   * Syncs state from props before the initial render. Rarely used in practice.
+componentDidUpdate(prevProps, prevState, snapshot)
+Called after the component updates. Use this for side effects after rendering.
 
-3. **`render()`**
+🔴 Unmounting Phase (Cleanup before component removal)
+componentWillUnmount()
+Cleans up before the component is removed from the DOM (e.g., removing timers or event listeners).
 
-   * Returns JSX to render the component's UI.
+🛑 Error Handling (When errors are thrown during rendering)
+static getDerivedStateFromError(error)
+Allows rendering a fallback UI if an error occurs in a child component.
 
-4. **`componentDidMount()`**
+componentDidCatch(error, info)
+Logs error details and provides information for debugging.
 
-   * Called after the initial render. Ideal for side effects like API calls or subscriptions.
-
----
-
-#### 🔵 **Updating Phase** (When props or state change)
-
-5. **`static getDerivedStateFromProps(props, state)`**
-
-   * Called before every update, when new props are received.
-
-6. **`shouldComponentUpdate(nextProps, nextState)`**
-
-   * Determines whether the component should re-render. Used for performance optimization.
-
-7. **`render()`**
-
-   * Re-renders the component when props or state changes.
-
-8. **`getSnapshotBeforeUpdate(prevProps, prevState)`**
-
-   * Captures information (e.g., scroll position) right before the DOM updates.
-
-9. **`componentDidUpdate(prevProps, prevState, snapshot)`**
-
-   * Called after the component updates. Use this for side effects after rendering.
-
----
-
-#### 🔴 **Unmounting Phase** (Cleanup before component removal)
-
-10. **`componentWillUnmount()`**
-
-    * Cleans up before the component is removed from the DOM (e.g., removing timers or event listeners).
-
----
-
-#### 🛑 **Error Handling** (When errors are thrown during rendering)
-
-11. **`static getDerivedStateFromError(error)`**
-
-    * Allows rendering a fallback UI if an error occurs in a child component.
-
-12. **`componentDidCatch(error, info)`**
-
-    * Logs error details and provides information for debugging.
----
-### **Note on `getInitialState()`**
-* **Deprecated:** This method was used in `React.createClass()` to initialize state. Modern React uses `this.state = {}` inside the **`constructor()`**.
-
+Note on getInitialState()
+Deprecated: This method was used in React.createClass() to initialize state. Modern React uses this.state = {} inside the constructor().
 --------------------------------------------------
 3.
