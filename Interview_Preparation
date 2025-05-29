@@ -176,3 +176,82 @@ Object keys are strings (if they're not a Symbol).
 1. If the object property is changed, then the new object is pointing to the same memory address, so the original object property will also change. ( call by reference ) 2. If the object is reassigned with a new object then it is allocated to a new memory location, i.e it will be a real copy (call by value).
 2. An empty array is while printing in console.log is treated as Array.toString(), so it prints an empty string.
 3. With arrow functions, the this keyword refers to its current surrounding scope.
+======================================
+List of all the topics revised from handwritten notebook:
+1. Diff between Function and Classs
+2. Life Cycle methods in class of Reactjs
+Here's your **Interview Reference Card** for the **React Class Component Lifecycle Methods**. You can use this as a handy guide for interviews or as a reference sheet.
+
+---
+
+### **React Class Component Lifecycle Methods**
+
+---
+
+#### 🟢 **Mounting Phase** (Initial setup of the component)
+
+1. **`constructor()`**
+
+   * Initializes the component. Define initial state and bind methods.
+
+2. **`static getDerivedStateFromProps(props, state)`**
+
+   * Syncs state from props before the initial render. Rarely used in practice.
+
+3. **`render()`**
+
+   * Returns JSX to render the component's UI.
+
+4. **`componentDidMount()`**
+
+   * Called after the initial render. Ideal for side effects like API calls or subscriptions.
+
+---
+
+#### 🔵 **Updating Phase** (When props or state change)
+
+5. **`static getDerivedStateFromProps(props, state)`**
+
+   * Called before every update, when new props are received.
+
+6. **`shouldComponentUpdate(nextProps, nextState)`**
+
+   * Determines whether the component should re-render. Used for performance optimization.
+
+7. **`render()`**
+
+   * Re-renders the component when props or state changes.
+
+8. **`getSnapshotBeforeUpdate(prevProps, prevState)`**
+
+   * Captures information (e.g., scroll position) right before the DOM updates.
+
+9. **`componentDidUpdate(prevProps, prevState, snapshot)`**
+
+   * Called after the component updates. Use this for side effects after rendering.
+
+---
+
+#### 🔴 **Unmounting Phase** (Cleanup before component removal)
+
+10. **`componentWillUnmount()`**
+
+    * Cleans up before the component is removed from the DOM (e.g., removing timers or event listeners).
+
+---
+
+#### 🛑 **Error Handling** (When errors are thrown during rendering)
+
+11. **`static getDerivedStateFromError(error)`**
+
+    * Allows rendering a fallback UI if an error occurs in a child component.
+
+12. **`componentDidCatch(error, info)`**
+
+    * Logs error details and provides information for debugging.
+---
+### **Note on `getInitialState()`**
+* **Deprecated:** This method was used in `React.createClass()` to initialize state. Modern React uses `this.state = {}` inside the **`constructor()`**.
+
+--------------------------------------------------
+3.
