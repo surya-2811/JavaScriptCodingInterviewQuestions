@@ -223,4 +223,14 @@ Logs error details and provides information for debugging.
 Note on getInitialState()
 Deprecated: This method was used in React.createClass() to initialize state. Modern React uses this.state = {} inside the constructor().
 --------------------------------------------------
-3.
+3. Parameter of useEffect
+4. for vs map
+5. console.log("+'dude'); // NAN
+6. console.log(typeof Null); //object
+7. useRef and useContext ?
+8. useMemo vs useCallback ?
+9. thik keyword ?
+10. Hoisting ?
+11. Binding method ?
+12. Ternary operator and nullish foolish and optional chaning ?
+--------------------------------------------------
