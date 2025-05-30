@@ -238,3 +238,9 @@ Deprecated: This method was used in React.createClass() to initialize state. Mod
 14. console.log('9'-'5') //4 and console.log('priya'-'bagde') //Nan
 15. The isNaN() function in JavaScript is used to check whether a value is NaN (Not-a-Number). It returns true if the value is NaN and false if the value is a valid number.
 16. for in vs for of loop
+17. Arrow/Fat function
+18. Push, Pop, Shift and Unshift
+19. Splice, Slice, Substring, Substr
+20. Delete second last element from an array
+21. Map, Filter, Reduce
+22. 
