@@ -1,0 +1,61 @@
+import React, { useEffect } from "react";
+
+export default function App() {
+  // Logs when input changes (debounced)
+  const handleChange = (e) => {
+    console.log("Debouncing");
+  };
+
+  // Logs when mouse moves (throttled)
+  const handleMouseMove = (e) => {
+    console.log("Throttling");
+  };
+
+  // Debounce utility function
+  function debounce(fn, delay) {
+    let timer;
+    return function (...args) {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        fn.apply(this, args);
+      }, delay);
+    };
+  }
+
+  // Throttle utility function
+  function throttle(func, delay) {
+    let run = false;
+    return function (...args) {
+      if (!run) {
+        func(...args);
+        run = true;
+        setTimeout(() => {
+          run = false;
+        }, delay);
+      }
+    };
+  }
+
+  // Add throttled mousemove listener when component mounts
+  useEffect(() => {
+    const throttledMouseMove = throttle(handleMouseMove, 2000);
+    window.addEventListener("mousemove", throttledMouseMove);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("mousemove", throttledMouseMove);
+    };
+  }, []);
+
+  return (
+    <div style={{ padding: "2rem" }}>
+      <h2>Debounce Input Example</h2>
+      <input
+        type="text"
+        placeholder="Start typing..."
+        onChange={debounce(handleChange, 500)}
+        style={{ padding: "10px", fontSize: "16px" }}
+      />
+    </div>
+  );
+}
